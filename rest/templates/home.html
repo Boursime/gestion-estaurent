@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark shadow">
+      <a class="navbar-brand text-white"  href="#">LA POMA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">ACCUEIL <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" href='plats/'>PLATS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="ambiance/">EMBIANCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">LOCALISATION</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <img src="https://wallpapercave.com/wp/wp1874169.jpg" class="img-fluid" alt="Responsive image">
+
+   
+
+    <h3 class="text-center mb-3">WELCOME TO OUR RESTAURENT</h3>
+    <p class="text-center">Bien sûr ! Permettez-moi de vous décrire un restaurant imaginaire pour vous donner une idée.
+
+      Le restaurant s'appelle "la POMA" et il est situé dans une belle rue pavée bordée d'arbres. Lorsque vous entrez, vous êtes accueilli par une ambiance chaleureuse et conviviale. L'espace est décoré dans un style élégant, avec des murs en briques apparentes et des tables en bois sombre.
+      
+      Le point central du restaurant est une grande fontaine au milieu de la salle, qui crée une atmosphère paisible et relaxante. Les grandes fenêtres donnent sur un jardin intérieur avec des arbres et des plantes luxuriantes, ajoutant une touche de nature et de fraîcheur à l'ensemble.</p>
+      <h4 class="text-center mb-3">NOS OFFRES</h4>
+     
+
+    <div class="container">
+     
+      <div class="row">
+        {%for ty in ty %} 
+        <div class="col-lg-4">
+         
+          <div class="card" style="width: 18rem;">
+
+            <img class="card-img-top" src="" alt="/restluxe/pexel">
+            <div class="card-body">
+              <h5 class="card-title">{{ty.types}}</h5>
+              <p class="card-text">Et voilà, un petit déjeuner sain et délicieux est prêt en quelques minutes seulement ! Bon appétit !</p>
+              <a href="{% url 'rest:detail' ty.id %}" class="btn btn-primary">Go somewhere</a>
+            
+            </div>
+            
+          </div>
+          
+        </div>
+        {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+   
+    
+
+
+    {% block content %}
+
+        {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+    
